@@ -48,24 +48,24 @@ class _OrderPageState extends State<OrderPage> {
       );
     });
     return OrderItem(
-      cartItemList: clist,
-      subTotal: data['subTotal'],
-      name: data['name'],
-      storeId: data['storeId'],
-      storeName: data['storeName'],
-      status: data['status'],
-      phoneNumber: data['phoneNumber'],
-      email: data['email'],
-      address: data['Address'],
-      dateTime: data['dateTime'],
-      deliveryCharges: data['deliveryCharges'],
-      deliveryTime: data['deliveryTime'],
-      discPercentage: data['discPercentage'],
-      extraStuffOrdered: data['extraStuffOrdered'],
-      paymentMethod: data['paymentMethod'],
-      userUid: data['userUid'],
-      delivertime: data['time'],
-    );
+        cartItemList: clist,
+        subTotal: data['subTotal'],
+        name: data['name'],
+        storeId: data['storeId'],
+        storeName: data['storeName'],
+        status: data['status'],
+        phoneNumber: data['phoneNumber'],
+        email: data['email'],
+        address: data['Address'],
+        dateTime: data['dateTime'],
+        deliveryCharges: data['deliveryCharges'],
+        deliveryTime: data['deliveryTime'],
+        discPercentage: data['discPercentage'],
+        extraStuffOrdered: data['extraStuffOrdered'],
+        paymentMethod: data['paymentMethod'],
+        userUid: data['userUid'],
+        delivertime: data['time'],
+        driverdescription: data['driverdescription']);
   }
 
   @override
@@ -458,6 +458,36 @@ class _OrderPageState extends State<OrderPage> {
                               fontSize: 18,
                               //fontWeight: FontWeight.w500,
                             ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text(
+                            "Description for driver:",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: <Widget>[
+                              Container(
+                                width: MediaQuery.of(context).size.width / 3,
+                                child: Text(
+                                  _orderItem.driverdescription,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    //fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),

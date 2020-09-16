@@ -13,6 +13,7 @@ class OrderItem {
   String extraStuffOrdered;
   String name;
   String paymentMethod;
+  String driverdescription;
   String phoneNumber;
   List<CartItem> cartItemList;
   String status;
@@ -23,6 +24,7 @@ class OrderItem {
 
   OrderItem(
       {@required this.address,
+      @required this.driverdescription,
       @required this.delivertime,
       @required this.dateTime,
       @required this.deliveryTime,
