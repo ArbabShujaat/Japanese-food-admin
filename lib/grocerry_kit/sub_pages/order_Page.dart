@@ -64,6 +64,7 @@ class _OrderPageState extends State<OrderPage> {
         extraStuffOrdered: data['extraStuffOrdered'],
         paymentMethod: data['paymentMethod'],
         userUid: data['userUid'],
+        orderType: data['deliveryType'],
         delivertime: data['time'],
         driverdescription: data['driverdescription']);
   }
@@ -207,8 +208,33 @@ class _OrderPageState extends State<OrderPage> {
                     ],
                   ),
                 ),
+
                 SizedBox(
                   height: 6,
+                ),
+                Container(
+                  margin:
+                      EdgeInsets.only(left: 20, right: 20, top: 4, bottom: 4),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(
+                        "Order Type:",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        _orderItem.orderType,
+                        style: TextStyle(
+                          color: Theme.of(context).primaryColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Divider(
                   color: Colors.black87,

@@ -21,9 +21,11 @@ class OrderItem {
   String storeName;
   String subTotal;
   String userUid;
+  String orderType;
 
   OrderItem(
       {@required this.address,
+      @required this.orderType,
       @required this.driverdescription,
       @required this.delivertime,
       @required this.dateTime,
